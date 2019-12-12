@@ -1,0 +1,59 @@
+@import url("https: //fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
+}
+
+main {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	inset-block: 0;
+	inset-inline: 0;
+	inline-size: 100%;
+	block-size: 100vh;
+	overflow: hidden;
+}
+
+h1 {
+	position: absolute;
+	inset-block-start: calc(50% - 100px);
+	inline-size: 100%;
+	text-align: center;
+	font-size: 6em;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.glass-spheres {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index: 3;
+	inline-size: 700px;
+	block-size: 400px;
+	margin: auto;
+	margin-block-start: -30px;
+}
+
+.glass-spheres div {
+	inline-size: 300px;
+	block-size: 300px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.7);
+	box-shadow: inset 0px 1px 32px 4px rgba(0, 0, 0, 0.06);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+}
+
+.glass-spheres div:nth-child(2) {
+	margin-inline-start: -60px;
+}
+
+.glass-spheres div:nth-child(3) {
+	margin-block-start: -90px;
+}

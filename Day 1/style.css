@@ -1,0 +1,132 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Montserrat";
+	background-color: #191725;
+	color: white;
+}
+
+nav,
+main {
+	padding: 30px;
+	inline-size: 85%;
+	margin: auto;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.navigation-links {
+	display: flex;
+	min-inline-size: 500px;
+	align-items: center;
+}
+
+.navigation-links h4 {
+	font-size: 1.2rem;
+	letter-spacing: 0.25rem;
+	font-weight: bolder;
+	margin-inline-end: 70px;
+}
+
+ul {
+	display: flex;
+	padding-inline: 0;
+}
+
+li {
+	list-style-type: none;
+	margin-inline-end: 35px;
+	font-size: 0.65rem;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+header {
+	block-size: 45vh;
+}
+
+header h1 {
+	font-size: 3.05rem;
+	margin: 30px 0;
+	margin-block: 30px;
+	inline-size: 40%;
+	line-height: 150%;
+}
+
+button {
+	min-inline-size: 90px;
+	block-size: 45px;
+	padding: 0 30px;
+	padding-inline: 30px;
+	border: 0;
+	border-radius: 25px;
+	font-size: 12px;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+button.dark {
+	color: white;
+	background-color: #191725;
+}
+
+button.light {
+	background-color: white;
+	color: #191725;
+}
+
+section.cards {
+	display: flex;
+}
+
+.cards > article {
+	inline-size: 200px;
+	margin-inline-end: 65px;
+}
+
+.cards h6 {
+	font-size: 14px;
+	font-weight: bolder;
+	line-height: 150%;
+	margin: 15px 0;
+	margin-block: 15px;
+}
+
+.cards p {
+	color: #6a667e;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 170%;
+}
+
+@media (max-width: 600px) {
+	section.cards {
+		display: inline-block;
+	}
+	button.dark,
+	.navigation-links ul {
+		display: none;
+	}
+	header {
+		block-size: 70vh;
+	}
+	header,
+	.cards > article {
+		inline-size: 100%;
+	}
+	.cards > article {
+		padding-block: 30px;
+	}
+}

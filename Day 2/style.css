@@ -1,0 +1,101 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: url(./img/background.jpg), #c7c8c3;
+	color: #2d2820;
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	padding-block: 30px;
+}
+nav,
+main {
+	inline-size: 90%;
+	margin: auto;
+}
+
+nav a {
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 1.5rem;
+	color: #2d2820;
+	font-weight: bolder;
+}
+
+nav .link {
+	border: 3px solid #2d2820;
+	text-align: center;
+	width: 120px;
+	padding: 10px;
+}
+
+nav .stripes {
+	border-block: 2px solid #2d2820;
+	height: 10px;
+	inline-size: 50px;
+	margin-inline-start: 40px;
+	margin-block-start: 15px;
+}
+
+nav .socials {
+	color: #c7c8c3;
+	display: flex;
+	text-align: right;
+	align-items: center;
+}
+
+nav .socials p {
+	font-size: 12px;
+	letter-spacing: 1%;
+}
+.socials .button {
+	margin-inline-start: 25px;
+}
+
+.socials .button button {
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	border: 0;
+	background: rgba(255, 255, 255, 0.06);
+}
+
+h1 {
+	font-size: 5rem;
+	font-weight: bolder;
+}
+
+.rotate {
+	position: relative;
+	inline-size: 180px;
+	block-size: 180px;
+	transform: rotate(-90deg);
+	font-size: 11px;
+	font-weight: 900;
+	margin-block-end: 20px;
+}
+
+.rotate h6 {
+	font-size: 1.5rem;
+}
+
+main div:last-of-type {
+	width: 300px;
+	margin-block-start: 30px;
+	margin-inline-start: 15%;
+	font-size: 12px;
+	line-height: 150%;
+}
+
+main div:last-of-type b {
+	font-size: 1.5rem;
+}

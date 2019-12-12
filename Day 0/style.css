@@ -1,0 +1,201 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #223996;
+	color: white;
+	font-family: "Montserrat";
+	background-image: radial-gradient(45deg, #223996, #748cec);
+	padding: 60px;
+}
+
+main,
+nav,
+section {
+	inline-size: 90%;
+	margin: auto;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav h4 {
+	font-size: 1.7rem;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+}
+ul {
+	margin: 0;
+}
+
+li {
+	text-transform: uppercase;
+	list-style: decimal-leading-zero;
+	list-style-position: inside;
+	font-size: 0.65rem;
+	margin-block: 15px;
+	padding: 5px;
+	text-align: start;
+}
+
+button {
+	min-inline-size: 65px;
+	block-size: 37px;
+	padding-inline: 15px;
+	margin: 5px;
+	border: 2px solid #ffffff9b;
+	border-radius: 25px;
+	font-size: 8px;
+	font-weight: 600;
+	text-transform: uppercase;
+	background: transparent;
+	color: #ffffff9b;
+	cursor: pointer;
+}
+
+aside {
+	display: block;
+	inline-size: 20%;
+	padding-block-start: 50px;
+}
+
+main {
+	padding-block-start: 70px;
+	display: flex;
+}
+
+header {
+	inline-size: 40%;
+	padding-inline: 15px;
+}
+
+h1 {
+	font-size: 3.5rem;
+	margin-block-end: 15px;
+}
+
+button.link-button {
+	border-color: #3064f8;
+	margin-block: 15px;
+	inline-size: 130px;
+	text-align: start;
+	padding: 10px;
+	position: relative;
+}
+
+.link-button::after {
+	content: "";
+	position: absolute;
+	background: white;
+	opacity: 0.5;
+	margin-inline: -3%;
+	margin-block-start: -9%;
+	inset-inline-end: 0;
+	right: 0;
+	block-size: 100%;
+	inline-size: 35px;
+	border-top-right-radius: 25px;
+	border-bottom-right-radius: 25px;
+}
+
+button.dark {
+	background: #3064f8;
+	border-color: #3064f8;
+}
+
+section {
+	display: flex;
+	padding-block-start: 50px;
+}
+
+section aside {
+	padding-block-start: 15px;
+}
+
+section aside ol li {
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: stretch;
+}
+
+.card {
+	position: relative;
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	block-size: 300px;
+	inline-size: 180px;
+	padding: 15px;
+	margin: 10px;
+	transition: 200ms ease all;
+}
+
+.card:hover,
+.card:focus {
+	background: rgba(255, 255, 255, 0.1);
+	box-shadow: 0px 2px 16px 8px rgba(0, 0, 0, 0.06);
+}
+
+.product-image {
+	block-size: 40%;
+}
+
+.product-company,
+.product-price {
+	block-size: 10%;
+	font-size: 0.55rem;
+	text-transform: uppercase;
+	color: #748cec;
+}
+
+.product-name {
+	font-size: 1.2rem;
+	margin-block-start: -12px;
+}
+
+.product-price {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-block-end: 20px;
+}
+
+.product-price p {
+	color: white;
+	margin-block: 5px;
+	font-size: 1rem;
+}
+
+button.link-button.product-action {
+	text-align: center;
+	inline-size: 100px;
+	transition: 300ms all ease-in-out;
+}
+
+button.link-button.product-action::after {
+	display: none;
+	transition: 300ms all ease-in-out;
+}
+
+.card:hover > button.link-button.product-action,
+.card:focus > button.link-button.product-action {
+	text-align: left;
+	inline-size: 130px;
+}
+.card:hover > button.link-button.product-action::after,
+.card:focus > button.link-button.product-action::after {
+	display: inline-block;
+}
