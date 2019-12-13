@@ -1,0 +1,257 @@
+@import url("https: //fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	transition: all 0.3s ease-in;
+}
+
+:root {
+	--color-background: #fddbf6;
+	--color-header-text: #000000;
+	--color-button-background: #ff005a;
+	--color-button-text: #ffffff;
+	--color-card: #fe78e2;
+	--color-card-large: #fe78e2;
+	--color-card-dark: #3100b6;
+	--color-avatar-bg: #1d244b;
+	--color-avatar-content: #fff;
+}
+
+@media (prefer-color-scheme: dark) {
+	:root {
+		--color-background: #1d244b;
+		--color-header-text: #fddbf6;
+		--color-card: #733fff;
+		--color-card-text: #000000;
+		--color-card-large: #1afdb0;
+		--color-card-dark: #733fff;
+		--color-avatar-bg: #ffffff;
+		--color-avatar-content: #ff005a;
+	}
+}
+
+.dark-mode {
+	--color-background: #1d244b;
+	--color-header-text: #fddbf6;
+	--color-card: #733fff;
+	--color-card-text: #000000;
+	--color-card-large: #1afdb0;
+	--color-card-dark: #733fff;
+	--color-avatar-bg: #ffffff;
+	--color-avatar-content: #ff005a;
+}
+
+body {
+	background-color: var(--color-background);
+	color: var(--color-header-text);
+	inline-size: 100%;
+	block-size: 100vh;
+	padding: 30px;
+	transition: all 0.3s ease-in;
+}
+
+nav,
+main {
+	inline-size: 85%;
+	margin: auto;
+}
+
+nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: right;
+}
+
+.avatar {
+	inline-size: 50px;
+	block-size: 50px;
+	background-color: var(--color-avatar-bg);
+	border-radius: 10px;
+	margin: 15px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.avatar::before {
+	height: 50%;
+	width: 50%;
+	content: "";
+	background: var(--color-avatar-content);
+	border-radius: 50%;
+}
+
+main {
+	display: flex;
+	flex-direction: row;
+	padding-block-start: 30px;
+}
+
+header {
+	width: 50%;
+}
+
+header * {
+	margin-block-end: 45px;
+}
+
+header h1 {
+	font-size: 3em;
+	color: var(--color-header-text);
+	letter-spacing: -2px;
+}
+
+header p {
+	color: var(--color-header-text);
+	inline-size: 80%;
+	font-size: 1.2em;
+}
+
+button {
+	width: 125px;
+	height: 45px;
+	font-weight: 600;
+	border: 0;
+	border-radius: 10px;
+	background-color: var(--color-button-background);
+	color: var(--color-button-text);
+}
+
+section {
+	inline-size: inherit;
+	block-size: 70vh;
+	padding-inline: 15px;
+}
+
+.d-flex {
+	display: flex;
+	justify-content: stretch;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.d-flex.a-center {
+	align-items: center;
+}
+
+.w-50,
+.w-40,
+.w-60 {
+	min-height: 100px;
+	padding: 5px;
+}
+
+.w-50 {
+	width: 50%;
+}
+
+.w-40 {
+	width: 40%;
+}
+
+.w-60 {
+	width: 60%;
+}
+
+.card {
+	border-radius: 25px;
+	inline-size: 46%;
+	min-block-size: 100px;
+	padding: 15px;
+	margin: 5px;
+	background: var(--color-card);
+	position: relative;
+}
+
+.card--medium,
+.card--large {
+	inline-size: 100%;
+}
+
+.card--large {
+	block-size: 300px;
+	background-color: var(--color-card-large);
+}
+
+.card--medium {
+	background-color: var(--color-card-dark);
+}
+
+.logo {
+	display: flex;
+}
+
+.logo div {
+	width: 20px;
+	height: 25px;
+	border: 2px solid black;
+	margin-inline-end: 10px;
+	border-radius: 50% 50% 70% 70%;
+	position: relative;
+	display: flex;
+}
+
+.logo div::before {
+	height: 10px;
+	width: 100%;
+	margin-block-start: -70%;
+	content: "";
+	background: #733fff;
+	border: 2px solid black;
+	border-radius: 50% 50% 1px 1px;
+}
+
+.red {
+	background-color: var(--color-button-background);
+}
+
+.yellow {
+	background-color: #fff500;
+}
+.teal {
+	background-color: #1afdb0;
+}
+
+.bottom-text,
+.top-text {
+	position: absolute;
+	color: black;
+	font-weight: 600;
+}
+
+.bottom-text {
+	bottom: 20px;
+}
+
+@media (max-width: 700px) {
+	.a-center p {
+		display: none;
+	}
+	main,
+	nav {
+		width: 100%;
+		display: block;
+	}
+	header,
+	section {
+		width: 100%;
+	}
+
+	.w-40,
+	.w-50,
+	.w-60 {
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	.card {
+		inline-size: 100%;
+		padding: 0;
+	}
+}

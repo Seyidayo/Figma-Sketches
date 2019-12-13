@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="stylesheet" href="style.css" />
+		<title>New year wishlist</title>
+	</head>
+	<body>
+		<nav>
+			<a
+				target="_blank"
+				href="https://dribbble.com/shots/9004914-New-Year-Wishlist-Web-concept"
+			>
+				<div class="logo">
+					<div class="red"></div>
+					<div class="yellow"></div>
+					<div class="teal"></div>
+				</div>
+			</a>
+			<div class="d-flex a-center">
+				<p>
+					hi, <br />
+					Candy Person!
+				</p>
+				<div class="avatar"></div>
+			</div>
+		</nav>
+		<main>
+			<header>
+				<h1>New Year wishlist</h1>
+				<p>
+					Oh yeah I want it all soo much wow! it will give me strength next year
+				</p>
+				<button>+ Follow</button>
+			</header>
+			<section>
+				<div class="d-flex">
+					<div class="w-50">
+						<div class="card--large card">
+							<p class="bottom-text">Put on a prickly XMAS sweater</p>
+						</div>
+					</div>
+					<div class="w-50 d-flex">
+						<div class="card--medium card"></div>
+						<div class="card "></div>
+						<div class="card "></div>
+					</div>
+				</div>
+				<div class="d-flex">
+					<div class="w-40">
+						<div class="card--large card"></div>
+					</div>
+					<div class="w-60 d-flex">
+						<div class="card--medium card">
+							<p class="top-text">"This is the way"</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<script>
+			let toggle = document.querySelector(".avatar"),
+				body = document.querySelector("body");
+
+			toggle.addEventListener("click", toggleDarkMode);
+			function toggleDarkMode(event) {
+				event.stopPropagation();
+				if (body.classList.contains("dark-mode")) {
+					body.classList.remove("dark-mode");
+				} else {
+					body.classList.add("dark-mode");
+				}
+			}
+		</script>
+	</body>
+</html>
