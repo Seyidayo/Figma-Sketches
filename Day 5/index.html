@@ -67,11 +67,7 @@
 			toggle.addEventListener("click", toggleDarkMode);
 			function toggleDarkMode(event) {
 				event.stopPropagation();
-				if (body.classList.contains("dark-mode")) {
-					body.classList.remove("dark-mode");
-				} else {
-					body.classList.add("dark-mode");
-				}
+				body.classList.toggle("dark-mode");
 			}
 		</script>
 	</body>

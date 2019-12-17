@@ -1,0 +1,124 @@
+/* @import url("https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800,900&display=swap"); */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+:root {
+	--color-dashboard-bg: #261d56;
+	--color-cart-bg: #f8faff;
+	--color-main-bg: #dee8ff;
+	--color-text: #261d56;
+	--color-circle-bg: #8080a7;
+	--color-card: #f8faff;
+	--color-card-alt: #ffcdc2;
+	--radius: 25px;
+	--small-radius: 15px;
+	--large-radius: 45px;
+}
+
+body {
+	max-inline-size: 100vw;
+	block-size: 100vh;
+	color: var(--color-text);
+	display: grid;
+	grid-template-columns: 120px 70% auto;
+	grid-template-areas: "nav main cart";
+}
+
+main {
+	background-color: var(--color-main-bg);
+	padding: 35px;
+	border-radius: var(--large-radius);
+	margin-left: -45px;
+	inline-size: 110%;
+	z-index: 2;
+	block-size: 100%;
+}
+
+nav {
+	background-color: var(--color-dashboard-bg);
+	inline-size: 300;
+	block-size: 100%;
+}
+
+aside {
+	background-color: var(--color-cart-bg);
+	block-size: 100%;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input {
+	inline-size: 300px;
+	block-size: 45px;
+	/* text-align: center; */
+	border: 0;
+	font-size: 12px;
+	padding-inline: 15px;
+	border-radius: var(--radius);
+	background: var(--color-card);
+}
+
+.card {
+	min-inline-size: 150px;
+	min-block-size: 120px;
+	padding: 15px 20px;
+	background: var(--color-card);
+	border-radius: var(--radius);
+	margin-block: 15px;
+}
+
+[role="heading"] {
+	font-size: 1.15em;
+	width: 50%;
+	line-height: 132.4%;
+}
+
+[id="current-day"] {
+	font-size: 12px;
+}
+
+.row-scroll {
+	inline-size: 100%;
+	display: flex;
+	flex-direction: row;
+	overflow-x: scroll;
+	justify-content: flex-start;
+	align-items: stretch;
+	scrollbar-width: none;
+}
+
+.row-scroll .card {
+	margin-inline-end: 20px;
+}
+
+.card.card_food {
+	border-radius: var(--small-radius);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: -30px;
+}
+
+.food_img {
+	inline-size: 100px;
+	block-size: 100px;
+	border-radius: 50%;
+	background: red;
+	margin-bottom: -50%;
+}
+
+.food_card {
+	display: flex;
+	inline-size: 300px;
+	flex-direction: column;
+	align-items: center;
+}
