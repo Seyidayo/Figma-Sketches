@@ -4,68 +4,127 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link rel="stylesheet" href="style.css" />
-		<!-- <link
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat:400,600|Sacramento&display=swap"
 			rel="stylesheet"
-			href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-			integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
-			crossorigin="anonymous"
-		/> -->
-		<title>Food Delivery Dashboard</title>
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			media="prefers-color-mode: dark"
+			href="style-dark.css"
+		/>
+		<title>Portfolio</title>
 	</head>
 	<body>
-		<nav></nav>
-		<main>
-			<form action="" class="flex">
-				<input
-					type="search"
-					name="searchTerm"
-					placeholder="Search by food name / restaurant"
-					id=""
-				/>
-				<p id="current-day">7th December 2019</p>
-			</form>
-
-			<article class="card flex">
-				<p class="title" role="heading">
-					Get free one <b>large popcorn</b> and
-					<b>one large fountain drink</b>
-					everytime you order over $30 or buy to rice bowl
-				</p>
-			</article>
-
+		<ul class="dark">
 			<section>
-				<div class="flex">
-					<p>
-						<b>Popular</b>
-						this week
+				<h1>
+					Hey!, <br />
+					the name's Faith
+				</h1>
+			</section>
+			<section>
+				<div class="ruler"></div>
+				<header class="center">
+					<p class="description">
+						A Developer from Lagos Nigeria with years of experience building
+						applications using core frontend technologies (HTML, CSS and JS).
 					</p>
-					<span>Sort by</span>
-				</div>
-				<section class="flex row-scroll">
-					<div class="food_card">
-						<div class="food_img"></div>
-						<div class="food_content card"></div>
-					</div>
-				</section>
+					<p class="description">
+						In the past year I’ve seen a lot to know your product ain't s*** if
+						the user don’t like it, this has led me to pursue a career building
+						simple, usable, accessible and optimized applications that have our
+						dear customers at the center
+					</p>
+				</header>
+				<div class="ruler"></div>
 			</section>
-
 			<section>
-				<h3>
-					<b>Favorite</b>
-					restaurant
-				</h3>
-				<section class="flex row-scroll">
-					<div class="card card_restaurant">
-						<div class="card_restaurant_img"></div>
-						<div class="card_restaurant_content">
-							<p><b>Artisan restaurant</b></p>
-							<p>Kumarpara, Sylhet</p>
-						</div>
+				<h2>Latest works</h2>
+				<div class="grid">
+					<div class="grid-item">
+						<big>01</big>
+						<article>
+							<p>
+								I take time out of my schedule to convert at least one dribbble
+								or figma design using CSS
+							</p>
+							<a href="#">website</a>
+							<a href="#">github</a>
+						</article>
 					</div>
-				</section>
+					<div class="grid-item">
+						<big>02</big>
+						<article>
+							<p>
+								I take time out of my schedule to convert at least one dribbble
+								or figma design using CSS
+							</p>
+							<a href="#">website</a>
+							<a href="#">github</a>
+						</article>
+					</div>
+					<div class="grid-item">
+						<big>03</big>
+						<article>
+							<p>
+								I take time out of my schedule to convert at least one dribbble
+								or figma design using CSS
+							</p>
+							<a href="#">website</a>
+							<a href="#">github</a>
+						</article>
+					</div>
+					<div class="grid-item">
+						<big>04</big>
+						<article>
+							<p>
+								I take time out of my schedule to convert at least one dribbble
+								or figma design using CSS
+							</p>
+							<a href="#">website</a>
+							<a href="#">github</a>
+						</article>
+					</div>
+				</div>
+				<p>
+					This sites are
+					<a href="https://github.com/seyidayo">public on github</a>, if you'd
+					like to follow along
+				</p>
 			</section>
-		</main>
-		<aside></aside>
+			<section>
+				<div class="ruler"></div>
+				<h2>Me?</h2>
+				<p class="description">
+					I’m simple! I like good articles, interesting food, drinking,
+					<a href="https://duduke.substack.com">good music</a>, engaging
+					podcasts, learning about money, scrolling through TikTok, 90s sitcom
+					and spending quality time with friends.
+				</p>
+				<p class="description">
+					You can find me
+					<a href="https://twitter.com/faithidowu_">retweeting</a> a lot of
+					Nigerian tech gists, please
+					<a href="mailto:faithid10@gmail.com">contact me</a> if you would like
+					to share awesome stuffs that are bursting your head right now - or you
+					know, want to work with me.
+				</p>
+				<div class="ruler"></div>
+			</section>
+			<footer>
+				<ul>
+					<li><a href="">Github</a></li>
+					<li><a href="">CodePen</a></li>
+					<li><a href="">LinkedIn</a></li>
+					<li><a href="">Twitter</a></li>
+				</ul>
+				<p>&copy; <span id="year"></span>, Faith Idowu, Don't postpone fun</p>
+			</footer>
+		</ul>
+		<script>
+			document.querySelector("#year").innerHTML = new Date().getFullYear();
+		</script>
 	</body>
 </html>

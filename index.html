@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Daily Sketches</title>
+		<style>
+			* {
+				box-sizing: border-box;
+				padding: 0;
+				margin: 0;
+			}
+			body {
+				font-family: "Montserrat", sans-serif;
+				padding: 30px;
+			}
+			h1 {
+				text-align: center;
+				font-size: 4rem;
+			}
+
+			header {
+				border-bottom: 1.5px dashed black;
+				padding: 30px;
+			}
+
+			footer {
+				text-align: center;
+			}
+
+			a {
+				color: inherit;
+				text-decoration: none;
+				border-bottom: 1.5px solid black;
+				padding: 2px;
+				padding-left: 10px;
+				font-weight: 600;
+				transition: background-color 0.3s, border-color 0.3s, color 0.2s;
+			}
+			a:hover,
+			a:focus {
+				color: white;
+				border-color: transparent;
+				background-color: red;
+			}
+
+			.grid {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 30px;
+				padding: 30px;
+			}
+
+			@media (max-width: 700px) {
+				.grid {
+					grid-template-columns: auto;
+					grid
+				}
+			}
+
+			.grid-item {
+				block-size: 250px;
+				width: 100%;
+				border: solid 1.5px black;
+				padding: 16px;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: flex-end;
+				text-align: right;
+				font-size: 0.9em;
+				transition: transform 0.3s, box-shadow 0.3s;
+			}
+
+			.grid-item:hover {
+				transform: translate(-3px, -3px);
+				box-shadow: 3px 3px 2px 4px rgba(0, 0, 0, 0.2);
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Daily Sketches</h1>
+			</header>
+			<div class="grid">
+				<article class="grid-item">
+					<h2 class="grid-item__text">Poseidon's Smart World</h2>
+					<a class="grid-item__link" href="Day 0">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">Unix Landing Page</h2>
+					<a class="grid-item__link" href="Day 1">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">Model Citizen Concept</h2>
+					<a class="grid-item__link" href="Day 2">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">Hand Drawn Nature</h2>
+					<a class="grid-item__link" href="Day 3">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">Glass Spheres</h2>
+					<a class="grid-item__link" href="Day 4">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">New Year Wishlist</h2>
+					<a class="grid-item__link" href="Day 5">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">CoSpace Concept</h2>
+					<a class="grid-item__link" href="Day 6">view</a>
+				</article>
+
+				<article class="grid-item">
+					<h2 class="grid-item__text">Portfolio Wireframe</h2>
+					<a class="grid-item__link" href="Day 7">view</a>
+				</article>
+			</div>
+
+			<footer>
+				<p>
+					&copy; <span id="year"></span>, <a href="#">Faith Idowu</a>, Stay
+					happy and ṣe jeje
+				</p>
+			</footer>
+		</main>
+
+		<script>
+			document.querySelector("#year").innerHTML = new Date().getFullYear();
+		</script>
+	</body>
+</html>
