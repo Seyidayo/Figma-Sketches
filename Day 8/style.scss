@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css?family=Muli:200,600,800&display=swap");
+$max-padding: 32px;
+$mid-padding: 16px;
+$min-padding: 8px;
+$bg-color: #ffffff;
+$main-bg-color: #fff9f0;
+$text-color: #132645;
+$light-text-color: #bcc1ca;
+$yellow-bg-color: #ffc50a;
+$purple-bg-color: #472842;
+$orange-bg-color: #ff5b01;
+$light-blue-bg-color: #8dc1b9;
+$border-radius: 20px;
+
+$screen-width: 400px;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	color: $text-color;
+	background-color: $bg-color;
+	font-family: "Muli", sans-serif;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 350px 1fr;
+
+	@media (min-width: $screen-width) {
+		grid-template-columns: 350px auto;
+		grid-template-rows: 1fr;
+	}
+}
+
+main {
+	background-color: $main-bg-color;
+	border-radius: 10px;
+	position: relative;
+	width: 100%;
+}
+
+aside {
+	width: 100%;
+	@media (max-width: $screen-width) {
+		img {
+			display: none;
+		}
+	}
+}
+
+aside,
+main {
+	padding: $max-padding;
+}
+
+nav {
+	position: absolute;
+	top: 0;
+	@media (min-width: $screen-width) {
+		left: calc(25%);
+		width: 400px;
+	}
+	left: 0;
+	width: 100%;
+	height: 45px;
+	padding: $min-padding;
+	background-color: $purple-bg-color;
+	border-radius: 0 0 $border-radius $border-radius;
+}
+
+header {
+	margin-top: $max-padding;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: initial;
+	font-style: normal;
+	padding-block-end: 5px;
+}
+
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.text-light {
+	color: $light-text-color;
+}
+
+.card {
+	min-height: 125px;
+	width: 100%;
+	padding: $min-padding;
+	margin: $mid-padding 0;
+	border-radius: $border-radius;
+	background-color: $bg-color;
+	&.card--yellow {
+		background-color: $yellow-bg-color;
+		.flex {
+			justify-content: space-around;
+			margin-top: $mid-padding;
+		}
+		.card {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $light-text-color;
+			span {
+				font-size: 2.5em;
+				color: $orange-bg-color;
+			}
+		}
+	}
+}
+
+.cutout {
+	background-color: $bg-color;
+	padding: $min-padding;
+	border-radius: $border-radius;
+	font-size: 0.85em;
+	width: 100px;
+	text-align: center;
+}
+
+.grid-highlights {
+	display: grid;
+	margin-block-end: $max-padding;
+	width: 100%;
+	padding: $mid-padding;
+	@media (min-width: $screen-width) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: $max-padding;
+		padding: 0;
+	}
+
+	* {
+		padding-block: $min-padding;
+	}
+	.card {
+		min-height: 250px;
+		box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.03);
+		padding: $mid-padding;
+
+		.flex {
+			align-items: baseline;
+			img {
+				object-fit: cover;
+				height: 150px;
+				width: 140px;
+				background-color: white;
+			}
+		}
+	}
+}
+
+.grid-sales {
+	display: grid;
+	@media (min-width: $screen-width) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		grid-template-areas: "purple purple bordered orange" "purple purple bordered orange" "blue blue bordered orange";
+		height: 300px;
+		grid-gap: $min-padding;
+	}
+
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 1fr), auto;
+	grid-template-areas: "purple" "blue" "bordered" "orange";
+	height: 700px;
+	grid-gap: $mid-padding;
+	margin: $max-padding 0;
+	color: $bg-color;
+
+	a {
+		color: $bg-color;
+	}
+
+	.text-light span {
+		font-size: 1.5em;
+		color: $bg-color;
+	}
+
+	.card {
+		margin: 0;
+		padding: $max-padding;
+	}
+
+	.card--orange {
+		background-color: $orange-bg-color;
+		grid-area: orange;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: $min-padding;
+		h3 {
+			padding: $mid-padding;
+		}
+		.card {
+			color: $orange-bg-color;
+			margin: 0;
+			height: 150px;
+		}
+	}
+	.card--purple {
+		background-color: $purple-bg-color;
+		grid-area: purple;
+		* {
+			line-height: 180%;
+		}
+	}
+	.card--light-blue {
+		background-color: $light-blue-bg-color;
+		grid-area: blue;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+
+		span {
+			font-size: 2em;
+		}
+	}
+	.card--bordered {
+		border: 3px dashed $orange-bg-color;
+		grid-area: bordered;
+		color: $orange-bg-color;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+}
+
+.text-price {
+	font-size: 2em;
+	color: $orange-bg-color;
+	font-weight: 600;
+}
