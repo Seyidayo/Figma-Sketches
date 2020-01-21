@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css?family=Monoton|Montserrat:600&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
+}
+
+:root {
+	--bg-color: #2a2a2a;
+	--text-color: #fff;
+	--button-bg-color: #fcae03;
+	--button-text-color: #2a2a2a;
+}
+
+body {
+	padding-top: 2rem;
+	background-color: var(--bg-color);
+	color: var(--text-color);
+}
+
+nav,
+main,
+footer {
+	width: 80%;
+	margin: auto;
+}
+
+nav {
+	font-size: 1.25rem;
+}
+
+nav ul {
+	display: inline-flex;
+}
+
+nav ul li {
+	margin-inline-start: 45px;
+}
+
+nav ul li:hover > a,
+nav ul li a:focus,
+nav ul li a:visited {
+	color: var(--button-bg-color);
+}
+
+a {
+	color: var(--text-color);
+	transition: color 0.3s;
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+form input {
+	border: 0;
+	border-bottom: 1px solid white;
+	background-color: transparent;
+	width: 70px;
+}
+
+form button {
+	color: var(--text-color);
+	background-color: transparent;
+	border: 0;
+}
+
+h1 {
+	font-family: "Monoton", cursive;
+	font-weight: 500;
+	font-size: 4rem;
+	text-transform: uppercase;
+	word-spacing: 30px;
+}
+
+main {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	padding-block-start: 60px;
+	border-bottom: 1px solid var(--text-color);
+}
+
+main header,
+main section {
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+main header > * {
+	margin-block-end: 30px;
+}
+
+main button {
+	max-width: 200px;
+	max-height: 55px;
+	border: 0;
+	border-radius: 5px;
+	padding: 1rem;
+	background-color: var(--button-bg-color);
+	color: var(--button-text-color);
+	font-size: 1.3rem;
+}
+
+main ul {
+	display: flex;
+	flex-direction: row;
+}
+
+main ul li {
+	margin: 0 15px;
+	font-size: 24px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+footer {
+	padding: 30px 0;
+	color: #848484;
+}
+
+footer ul {
+	display: flex;
+	flex-direction: row;
+}
+
+footer ul li {
+	margin-inline-end: 70px;
+}
+
+footer ul li a {
+	color: #848484;
+	text-decoration: none;
+}
+
+@media (max-width: 400px) {
+	nav,
+	main,
+	footer {
+		width: 90%;
+	}
+
+	nav ul,
+	nav form {
+		display: none;
+	}
+
+	footer ul {
+		display: block;
+	}
+
+	footer ul li {
+		margin-block-end: 15px;
+	}
+}
