@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+
+		<title>Frontend Mentor | Base Apparel coming soon page</title>
+	</head>
+	<body>
+		<nav>
+			<img src="./images/logo.svg" alt=" " width="158" height="33" />
+		</nav>
+		<main>
+			<section>
+				<header>
+					<h1>
+						<span>We're</span> coming <br />
+						soon
+					</h1>
+					<p>
+						Hello fellow shoppers! We're currently building our new fashion
+						store. Add your email below to stay up-to-date with announcements
+						and our launch deals
+					</p>
+
+					<!-- <legend> -->
+					<form class="email" method="post" novalidate>
+						<input
+							class="email__input"
+							id="email__input"
+							type="email"
+							name="email"
+							placeholder="Email Address"
+						/>
+						<img
+							class="invalid__icon"
+							src="./images/icon-error.svg"
+							alt=" "
+							width="24"
+							height="24"
+						/>
+						<button class="email__button" type="submit">
+							<img src="./images/icon-arrow.svg" alt=" " />
+						</button>
+					</form>
+					<p class="invalid__text">Please provide a valid email</p>
+					<!-- </legend> -->
+				</header>
+			</section>
+		</main>
+		<aside class="hero"></aside>
+		<script>
+			var form = document.querySelector(".email"),
+				email = form.querySelector(".email__input"),
+				button = form.querySelector(".email__button"),
+				error_text = document.querySelector(".invalid__text"),
+				error_icon = document.querySelector(".invalid__icon");
+
+			const validateEmail = () => {
+				let test = /(^\w.*@\w+\.\w)/.test(email.value);
+				if (!test) {
+					form.classList.add("invalid");
+					error_text.style.opacity = "1";
+					error_icon.style.opacity = "1";
+				} else {
+					form.classList.remove("invalid");
+					error_text.style.opacity = "0";
+					error_icon.style.opacity = "0";
+				}
+			};
+			button.addEventListener("click", event => {
+				event.preventDefault();
+				validateEmail();
+			});
+		</script>
+	</body>
+</html>

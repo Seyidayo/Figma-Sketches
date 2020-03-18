@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+  inline-size: 100%;
+  block-size: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 250px 1fr;
+      grid-template-rows: auto 250px 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "nav" "hero" "content";
+  font-size: 16px;
+  color: #413a3a;
+  background: url(./images/bg-pattern-desktop.svg);
+  background-size: cover;
+}
+
+@media (min-width: 1440px) {
+  body {
+    -ms-grid-rows: auto 1fr;
+        grid-template-rows: auto 1fr;
+    -ms-grid-columns: 1fr 610px;
+        grid-template-columns: 1fr 610px;
+        grid-template-areas: "nav hero" "content hero";
+  }
+}
+
+.hero {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: hero;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-image: url(./images/hero-mobile.jpg);
+}
+
+@media (min-width: 1440px) {
+  .hero {
+    background-size: cover;
+    background-image: url(./images/hero-desktop.jpg);
+  }
+}
+
+nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  padding: 1.5rem;
+}
+
+@media (min-width: 1440px) {
+  nav {
+    inline-size: 70%;
+    margin: auto;
+    padding: 2rem 0;
+  }
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: content;
+  -webkit-margin-before: 3rem;
+          margin-block-start: 3rem;
+}
+
+@media (min-width: 1440px) {
+  main {
+    -webkit-margin-before: 6.5rem;
+            margin-block-start: 6.5rem;
+  }
+}
+
+main > section {
+  inline-size: 85%;
+  margin: auto;
+}
+
+@media (min-width: 1440px) {
+  main > section {
+    inline-size: 70%;
+  }
+}
+
+header {
+  text-align: center;
+}
+
+@media (min-width: 1440px) {
+  header {
+    inline-size: 80%;
+    text-align: left;
+  }
+}
+
+header h1 {
+  text-transform: uppercase;
+  word-break: break-all;
+  letter-spacing: 0.75rem;
+  -webkit-margin-after: 1.5rem;
+          margin-block-end: 1.5rem;
+  font-size: 2rem;
+}
+
+@media (min-width: 1440px) {
+  header h1 {
+    font-size: 4.2rem;
+  }
+}
+
+header h1 span {
+  display: block;
+  font-weight: 100;
+  font-style: normal;
+  color: #ce9797;
+}
+
+header p {
+  font-size: 1.05rem;
+  line-height: 180%;
+  font-weight: 600;
+  color: #ce9797;
+}
+
+.email {
+  inline-size: 100%;
+  height: 60px;
+  background: transparent;
+  border: 2px solid #ce9797;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 0.5rem;
+  margin: 2rem 0;
+  color: #ce9797;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  /* Change the white to any color ;) */
+}
+
+.email.invalid {
+  border-color: #f96262;
+}
+
+.email > :focus {
+  outline: 0;
+}
+
+.email input:-webkit-autofill,
+.email input:-webkit-autofill:hover,
+.email input:-webkit-autofill:focus,
+.email input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #fff7f7 inset !important;
+}
+
+.email__input {
+  block-size: 100%;
+  inline-size: calc(100% - 100px);
+  border: none;
+  background: transparent;
+  font-size: 0.95rem;
+  padding: 0.5em 1.5em;
+  color: #413a3a;
+}
+
+@media (min-width: 1440px) {
+  .email__input {
+    inline-size: calc(100% - 140px);
+  }
+}
+
+.email__button {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  inline-size: 75px;
+  block-size: calc(100% + 4px);
+  border: 0;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  -webkit-box-shadow: 0px 10px 15px 1px #f8bfbf;
+          box-shadow: 0px 10px 15px 1px #f8bfbf;
+  -webkit-transition: -webkit-box-shadow 0.3s;
+  transition: -webkit-box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, -webkit-box-shadow 0.3s;
+  cursor: pointer;
+}
+
+@media (min-width: 1440px) {
+  .email__button {
+    inline-size: 100px;
+  }
+}
+
+.email__button:hover {
+  background: linear-gradient(135deg, #f8bfbf, #f8bfbf);
+  -webkit-box-shadow: 0px 10px 20px 5px #f4a4a4;
+          box-shadow: 0px 10px 20px 5px #f4a4a4;
+}
+
+.invalid__icon {
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.invalid__text {
+  opacity: 0;
+  text-align: left;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  font-size: 0.8rem;
+  color: #f96262;
+  -webkit-margin-start: 2rem;
+          margin-inline-start: 2rem;
+  margin-top: -20px;
+}
+/*# sourceMappingURL=style.css.map */

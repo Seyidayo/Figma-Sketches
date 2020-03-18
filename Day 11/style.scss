@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap");
+
+$primary-color: hsl(0, 93%, 68%);
+$primary-color-lite: hsl(0, 36%, 70%);
+$neutral-color: hsl(0, 6%, 24%);
+$tablet: 375px;
+$desktop: 1440px;
+
+// - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Josefin Sans", sans-serif;
+}
+
+body {
+	inline-size: 100%;
+	block-size: 100vh;
+	display: grid;
+	grid-template-rows: auto 250px 1fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "nav" "hero" "content";
+	@media (min-width: $desktop) {
+		grid-template-rows: auto 1fr;
+		grid-template-columns: 1fr 610px;
+		grid-template-areas: "nav hero" "content hero";
+	}
+	font-size: 16px;
+	color: $neutral-color;
+	background: url(./images/bg-pattern-desktop.svg);
+	background-size: cover;
+	// background-repeat: no-repeat;
+}
+
+.hero {
+	grid-area: hero;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-image: url(./images/hero-mobile.jpg);
+	@media (min-width: $desktop) {
+		background-size: cover;
+		background-image: url(./images/hero-desktop.jpg);
+	}
+}
+
+nav {
+	grid-area: nav;
+	padding: 1.5rem;
+	@media (min-width: $desktop) {
+		inline-size: 70%;
+		margin: auto;
+		padding: 2rem 0;
+	}
+}
+
+main {
+	grid-area: content;
+	margin-block-start: 3rem;
+	@media (min-width: $desktop) {
+		margin-block-start: 6.5rem;
+	}
+	> section {
+		inline-size: 85%;
+		@media (min-width: $desktop) {
+			inline-size: 70%;
+		}
+		margin: auto;
+	}
+}
+
+header {
+	text-align: center;
+	@media (min-width: $desktop) {
+		inline-size: 80%;
+		text-align: left;
+	}
+	h1 {
+		text-transform: uppercase;
+		word-break: break-all;
+		letter-spacing: 0.75rem;
+		margin-block-end: 1.5rem;
+		font-size: 2rem;
+		@media (min-width: $desktop) {
+			font-size: 4.2rem;
+		}
+		span {
+			display: block;
+			font-weight: 100;
+			font-style: normal;
+			color: $primary-color-lite;
+		}
+	}
+
+	p {
+		font-size: 1.05rem;
+		line-height: 180%;
+		font-weight: 600;
+		color: $primary-color-lite;
+	}
+}
+
+.email {
+	inline-size: 100%;
+	height: 60px;
+	background: transparent;
+	border: 2px solid $primary-color-lite;
+	border-radius: 30px;
+	display: flex;
+	align-items: center;
+	position: relative;
+	padding: 0.5rem;
+	margin: 2rem 0;
+	color: $primary-color-lite;
+	transition: all 0.3s;
+
+	&.invalid {
+		border-color: $primary-color;
+	}
+
+	> :focus {
+		outline: 0;
+	}
+
+	/* Change the white to any color ;) */
+	input:-webkit-autofill,
+	input:-webkit-autofill:hover,
+	input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+		-webkit-box-shadow: 0 0 0 30px #fff7f7 inset !important;
+	}
+
+	&__input {
+		block-size: 100%;
+		inline-size: calc(100% - 100px);
+		@media (min-width: $desktop) {
+			inline-size: calc(100% - 140px);
+		}
+		border: none;
+		background: transparent;
+		font-size: 0.95rem;
+		padding: 0.5em 1.5em;
+		color: $neutral-color;
+	}
+
+	&__button {
+		position: absolute;
+		top: -2px;
+		right: -2px;
+		inline-size: 75px;
+		@media (min-width: $desktop) {
+			inline-size: 100px;
+		}
+		block-size: calc(100% + 4px);
+		border: 0;
+		border-radius: 30px;
+		background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+		box-shadow: 0px 10px 15px 1px hsl(0, 80%, 86%);
+		transition: box-shadow 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%));
+			box-shadow: 0px 10px 20px 5px hsl(0, 78%, 80%);
+		}
+	}
+}
+
+.invalid__icon {
+	opacity: 0;
+	transition: all 0.3s;
+}
+.invalid__text {
+	opacity: 0;
+	text-align: left;
+	transition: all 0.3s;
+	font-size: 0.8rem;
+	color: $primary-color;
+	margin-inline-start: 2rem;
+	margin-top: -20px;
+}
