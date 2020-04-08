@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+:root {
+	--secondary-color: hsl(200, 40, 50);
+	--background-color: #f9feff;
+	--border-color: #dadce0;
+	--deeper-border-color: #000;
+}
+
+body {
+	block-size: 100vh;
+	inline-size: 100%;
+	font-size: 18px;
+	padding: 3rem;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 70px 1fr;
+	gap: 1rem;
+	background-color: var(--background-color);
+}
+
+header {
+	grid-column: 1 / span 2;
+	grid-row: 1;
+}
+
+fieldset {
+	padding: 1rem 0;
+	margin: 1.5rem 0;
+	border: 0;
+	border-top: 1px solid var(--border-color);
+	border-radius: 0.25rem;
+}
+
+label,
+legend,
+article > section h5 {
+	text-transform: uppercase;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.04rem;
+}
+
+legend,
+article > section h5 {
+	font-size: 1.2rem;
+}
+
+input,
+select {
+	display: block;
+	inline-size: 100%;
+	min-block-size: 45px;
+	padding: 0.5rem;
+	margin: 0.25rem auto 1rem;
+	border: 1.5px solid var(--border-color);
+	border-radius: 0.25rem;
+	background-color: #fff;
+	transition: border-color 0.3s;
+}
+
+input:focus,
+input:hover,
+select:focus,
+select:hover {
+	border-color: var(--deeper-border-color);
+	outline: none;
+}
+
+input:disabled:hover {
+	border-color: var(--border-color);
+}
+
+button {
+	inline-size: 140px;
+	block-size: 45px;
+	margin: 1rem 0;
+	border: 1px solid var(--border-color);
+	border-radius: 0.25rem;
+	background-color: var(--background-color);
+	font-weight: 600;
+	cursor: pointer;
+	transition: background 0.3s, border-color 0.3s;
+}
+
+button:hover {
+	background-color: var(--border-color);
+	border-color: var(--deeper-border-color);
+}
+
+.d-grid {
+	display: grid;
+	gap: 1rem;
+}
+
+.two-grid {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.four-grid {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+article {
+	padding: 1rem;
+}
+
+article > section {
+	padding: 1rem 0;
+	margin: 1.5rem 0;
+	border: 0;
+	border-top: 1px solid var(--border-color);
+	border-radius: 0.25rem;
+}
+
+article > section h5 {
+	margin: 1rem 0;
+}
+
+.four-grid label {
+	display: contents;
+}
