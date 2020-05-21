@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 385px) {
+  html {
+    font-size: 32px;
+  }
+}
+
+body {
+  font-family: "inter", sans-serif;
+  min-block-size: calc(100vh - 40px);
+  padding: 1em;
+  background-image: url(./images/pattern-curve.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: left;
+  background-position-y: 102%;
+}
+
+.page-wrap {
+  inline-size: 100%;
+  height: calc(100vh - 40px);
+  overflow: hidden;
+}
+
+.slide-frame {
+  min-height: calc(100vh - 40px);
+  inline-size: 100%;
+  block-size: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: 'frame' 'testimony';
+  gap: 1em;
+}
+
+@media (min-width: 385px) {
+  .slide-frame {
+    -ms-grid-columns: 1fr 50%;
+        grid-template-columns: 1fr 50%;
+        grid-template-areas: 'testimony frame';
+  }
+}
+
+.user__frame {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: frame;
+  inline-size: 100%;
+  height: 100%;
+  background-image: url("./images/pattern-bg.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.user__image {
+  -webkit-box-shadow: -3px 13px 35px -18px rgba(0, 0, 0, 0.15);
+          box-shadow: -3px 13px 35px -18px rgba(0, 0, 0, 0.15);
+}
+
+.user__testimony {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: testimony;
+  padding-top: 1em;
+  background-image: url(./images/pattern-quotes.svg);
+  background-repeat: no-repeat;
+  background-position-y: top;
+  background-position-x: center;
+  background-size: 70px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 385px) {
+  .user__testimony {
+    background-position: top;
+    background-position-x: 10%;
+    background-size: initial;
+    text-align: justify;
+    font-size: 1.25rem;
+  }
+}
+
+.user__testimony__content {
+  font-weight: 300;
+}
+
+.user__testimony__name {
+  margin-top: 0.75em;
+}
+
+@media (min-width: 385px) {
+  .user__testimony__name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.user__testimony__name b {
+  font-weight: 500;
+}
+
+.user__testimony__name span {
+  color: #babacf;
+  font-weight: 300;
+}
+
+.user__testimony__name * {
+  display: block;
+}
+/*# sourceMappingURL=style.css.map */
