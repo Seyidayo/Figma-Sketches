@@ -1,91 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-		<title>Daily Sketches</title>
-		<style>
-			* {
-				box-sizing: border-box;
-				padding: 0;
-				margin: 0;
-			}
-			body {
-				font-family: 'Montserrat', sans-serif;
-				padding: 30px;
-			}
-			h1 {
-				text-align: center;
-				font-size: 4rem;
-			}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Daily Sketches</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        padding: 30px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 4rem;
+      }
 
-			header {
-				border-bottom: 1.5px dashed black;
-				padding: 30px;
-			}
+      header {
+        border-bottom: 1.5px dashed black;
+        padding: 30px;
+      }
 
-			footer {
-				text-align: center;
-			}
+      footer {
+        text-align: center;
+      }
 
-			a {
-				color: inherit;
-				text-decoration: none;
-				border-bottom: 1.5px solid black;
-				padding: 2px;
-				padding-left: 10px;
-				font-weight: 600;
-				transition: background-color 0.3s, border-color 0.3s, color 0.2s;
-			}
-			a:hover,
-			a:focus {
-				color: white;
-				border-color: transparent;
-				background-color: red;
-			}
+      a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: 1.5px solid black;
+        padding: 2px;
+        padding-left: 10px;
+        font-weight: 600;
+        transition: background-color 0.3s, border-color 0.3s, color 0.2s;
+      }
+      a:hover,
+      a:focus {
+        color: white;
+        border-color: transparent;
+        background-color: red;
+      }
 
-			.grid {
-				display: grid;
-				grid-template-columns: repeat(4, 1fr);
-				gap: 30px;
-				padding: 30px;
-			}
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 30px;
+      }
 
-			@media (max-width: 700px) {
-				.grid {
-					grid-template-columns: auto;
-				}
-			}
+      @media (max-width: 700px) {
+        .grid {
+          grid-template-columns: auto;
+        }
+      }
 
-			.grid-item {
-				block-size: 250px;
-				width: 100%;
-				border: solid 1.5px black;
-				padding: 16px;
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				align-items: flex-end;
-				text-align: right;
-				font-size: 0.9em;
-				transition: transform 0.3s, box-shadow 0.3s;
-			}
+      .grid-item {
+        block-size: 250px;
+        width: 100%;
+        border: solid 1.5px black;
+        padding: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        font-size: 0.9em;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-			.grid-item:hover {
-				transform: translate(-3px, -3px);
-				box-shadow: 3px 3px 2px 4px rgba(0, 0, 0, 0.2);
-			}
-		</style>
-	</head>
-	<body>
-		<main>
-			<header>
-				<h1>Daily Sketches</h1>
-			</header>
-			<div class="grid">
-				<!--	<article class="grid-item">
+      .grid-item:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 3px 3px 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Daily Sketches</h1>
+      </header>
+      <div class="grid">
+        <!--	<article class="grid-item">
 					<h2 class="grid-item__text">Poseidon's Smart World</h2>
 					<a class="grid-item__link" href="Day 0">view</a>
 				</article>
@@ -115,12 +118,12 @@
 					<a class="grid-item__link" href="Day 5">view</a>
 				</article>-->
 
-				<article class="grid-item">
-					<h2 class="grid-item__text">CoSpace Concept</h2>
-					<a class="grid-item__link" href="Day 6">view</a>
-				</article>
+        <article class="grid-item">
+          <h2 class="grid-item__text">CoSpace Concept</h2>
+          <a class="grid-item__link" href="Day 6">view</a>
+        </article>
 
-				<!-- <article class="grid-item">
+        <!-- <article class="grid-item">
 					<h2 class="grid-item__text">Portfolio Wireframe</h2>
 					<a class="grid-item__link" href="Day 7">view</a>
 				</article>
@@ -135,39 +138,48 @@
 					<a class="grid-item__link" href="Day 9">view</a>
 				</article> -->
 
-				<article class="grid-item">
-					<h2 class="grid-item__text">FEM - Base Apparel</h2>
-					<a class="grid-item__link" href="Day 11">view</a>
-				</article>
+        <article class="grid-item">
+          <h2 class="grid-item__text">FEM - Base Apparel</h2>
+          <a class="grid-item__link" href="Day 11">view</a>
+        </article>
 
-				<article class="grid-item">
-					<h2 class="grid-item__text">FEM - Huddle</h2>
-					<a class="grid-item__link" href="Day 12">view</a>
-				</article>
+        <article class="grid-item">
+          <h2 class="grid-item__text">FEM - Huddle</h2>
+          <a class="grid-item__link" href="Day 12">view</a>
+        </article>
 
-				<article class="grid-item">
-					<h2 class="grid-item__text">FEM - Huddle Full Page</h2>
-					<a class="grid-item__link" href="Day 13">view</a>
-				</article>
+        <article class="grid-item">
+          <h2 class="grid-item__text">FEM - Huddle Full Page</h2>
+          <a class="grid-item__link" href="Day 13">view</a>
+        </article>
 
-				<article class="grid-item">
-					<h2 class="grid-item__text">FEM - Social Dashboard</h2>
-					<a class="grid-item__link" href="Day 14">view</a>
-				</article>
+        <article class="grid-item">
+          <h2 class="grid-item__text">FEM - Social Dashboard</h2>
+          <a class="grid-item__link" href="Day 14">view</a>
+        </article>
 
-				<article class="grid-item">
-					<h2 class="grid-item__text">COVID - Novelty Estimator</h2>
-					<a class="grid-item__link" href="Covid-Estimator/">view</a>
-				</article>
-			</div>
+        <article class="grid-item">
+          <h2 class="grid-item__text">FEM - Testimonials</h2>
+          <a class="grid-item__link" href="Day 15">view</a>
+        </article>
 
-			<footer>
-				<p>&copy; <span id="year"></span>, <a href="https://faithidowu.netlify.app">Faith Idowu</a>, Stay happy and ṣe jeje</p>
-			</footer>
-		</main>
+        <article class="grid-item">
+          <h2 class="grid-item__text">COVID - Novelty Estimator</h2>
+          <a class="grid-item__link" href="Covid-Estimator/">view</a>
+        </article>
+      </div>
 
-		<script>
-			document.querySelector('#year').innerHTML = new Date().getFullYear()
-		</script>
-	</body>
+      <footer>
+        <p>
+          &copy; <span id="year"></span>,
+          <a href="https://faithidowu.netlify.app">Faith Idowu</a>, Stay happy
+          and ṣe jeje
+        </p>
+      </footer>
+    </main>
+
+    <script>
+      document.querySelector("#year").innerHTML = new Date().getFullYear();
+    </script>
+  </body>
 </html>
