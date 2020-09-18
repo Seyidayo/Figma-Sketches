@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Frontend Mentor | Project tracking intro component</title>
+  </head>
+  <body>
+    <div id="gray-bg"></div>
+    <nav class="nav container">
+      <img
+        class="nav__logo"
+        src="./images/logo.svg"
+        width="24"
+        height="24"
+        alt=""
+      />
+
+      <ul class="nav__list">
+        <li class="nav__list-item"><a href="#">Product</a></li>
+        <li class="nav__list-item"><a href="#">Features</a></li>
+        <li class="nav__list-item"><a href="#">Pricing</a></li>
+        <li class="nav__list-item action"><a href="#">Login</a></li>
+      </ul>
+
+      <button class="menu" type="button">
+        <i class="icon"></i>
+      </button>
+    </nav>
+    <main class="content">
+      <header class="content__text container">
+        <p class="content__description">
+          <span> New </span> Monograph Dashboard
+        </p>
+        <h1 class="content__title">Powerful insights into your team</h1>
+        <p class="content__body">
+          Project planning and time tracking for agile teams
+        </p>
+        <div class="content__actions">
+          <button class="content__actions-cta">Schedule a demo</button>
+          <p class="content__actions-text">to see a live preview</p>
+        </div>
+      </header>
+      <div class="content__image"></div>
+    </main>
+  </body>
+
+  <script src="./script.js"></script>
+</html>
