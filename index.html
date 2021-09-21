@@ -24,17 +24,17 @@
       <p>
         &copy; <span id="year"></span>,
         <a href="https://seyidayo.github.io">Faith Idowu</a> /
-        <a href="/old">Old</a>
+        <a href="old">Old</a>
       </p>
     </footer>
 
     <script>
-      document.querySelector("#year").innerHTML = new Date().getFullYear();
+      document.querySelector('#year').innerHTML = new Date().getFullYear();
     </script>
 
     <script type="module" async>
-      const rootElement = document.getElementById("root");
-      const links = await fetch("data.json")
+      const rootElement = document.getElementById('root');
+      const links = await fetch('data.json')
         .then((response) => response.json())
         .then((data) => {
           return data;

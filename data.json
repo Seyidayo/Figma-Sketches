@@ -1,38 +1,38 @@
 [
   {
     "title": "CoSpace Concept",
-    "link": "/cospace-concept"
+    "link": "cospace-concept"
   },
   {
     "title": "FEM - Base Apparel",
-    "link": "/fem-base-apparel"
+    "link": "fem-base-apparel"
   },
   {
     "title": "FEM - Huddle",
-    "link": "/fem-huddle"
+    "link": "fem-huddle"
   },
   {
     "title": "FEM - Huddle Full Page",
-    "link": "/fem-huddle-full"
+    "link": "fem-huddle-full"
   },
   {
     "title": "FEM - Social Dashboard",
-    "link": "/fem-social-dashboard"
+    "link": "fem-social-dashboard"
   },
   {
     "title": "FEM - Testimonials",
-    "link": "/fem-testimonials"
+    "link": "fem-testimonials"
   },
   {
     "title": "FEM - Project Tracking",
-    "link": "/fem-project-tracking"
+    "link": "fem-project-tracking"
   },
   {
     "title": "Covid - Novelty Estimator",
-    "link": "/covid-estimator"
+    "link": "covid-estimator"
   },
   {
     "title": "FEM - Time tracking dashboard",
-    "link": "/fem-time-tracking-dashboard"
+    "link": "fem-time-tracking-dashboard"
   }
 ]
