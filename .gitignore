@@ -1,4 +1,7 @@
 */design
 */style-guide.md
 */style.css.map
-*/README.md
+*/.gitignore
+
+.DS_Store
+.prettierignore
